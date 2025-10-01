@@ -1,27 +1,39 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
 # Build results
 bin/
 obj/
 
-# Visual Studio files
-.vs/
-*.user
-*.suo
-*.vscode/
+# Visual Studio Code
+.vscode/
 
-# Database files
-*.mdf
-*.ldf
-
-# Rider files
+# Rider
 .idea/
+
+# ASP.NET Core
+wwwroot/lib/
+
+# Entity Framework Migrations
+Migrations/
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
 
 # Logs
 *.log
 
-# NuGet packages
-*.nupkg
-*.snupkg
-packages/
+# OS generated files
+.DS_Store
+Thumbs.db
 
-# Others
-*.DS_Store
+# Optional: temporary files
+*.tmp
+*.temp
+*.bak
