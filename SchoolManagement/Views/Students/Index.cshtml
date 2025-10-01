@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SchoolManagement.Models.Student>
+
+<h2>Students</h2>
+
+<p><a asp-action="Create">Create New Student</a></p>
+
+<table>
+    <tr>
+        <th>Full Name</th>
+        <th>School</th>
+        <th>Class</th>
+        <th>Subjects</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.FullName</td>
+            <td>@student.School?.Name</td>
+            <td>@student.SchoolClass?.Name</td>
+            <td>@string.Join(", ", student.StudentSubjects.Select(ss => ss.Subject.Name))</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@student.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
